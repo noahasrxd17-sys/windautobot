@@ -48,7 +48,7 @@ public class AutoCommand extends Module {
 
     @EventHandler
     private void onTick(TickEvent.Post event) {
-        if (mc.player == null || mc.getNetworkHandler() == null) return;
+        if (mc.player == null ) return;
 
         if (++timer >= delay.get()) {
             ChatUtils.sendPlayerMsg(command.get());
